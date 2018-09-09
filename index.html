@@ -1,20 +1,43 @@
+<!DOCTYPE html>
+
 <html>
 <head>
-    <meta language="en-US"/>
+    <meta charset="UTF-8"/>
     <title>Dash into my life</title>
 	<script src="./dashsign.js"></script>
+	
+	<style type="text/css">
+div,canvas,p{
+	border:1px solid blue;
+}
+body{
+	margin-left:10%;
+	margin-right:10%;
+	margin-top:5%;
+}
+
+#dash-sign{
+	margin-left:2%;
+	margin-top:2%;
+	float:left;
+}
+	</style>
 </head>
 <body>
 	<div id="title">
-	    <canvas id="dash" width="80" height="80"></canvas>
+	    <canvas id="dash-sign" width="80" height="80"></canvas>
 	    <script type="text/javascript">
-	    	var c = document.getElementById("dash");
+	    	var c = document.getElementById("dash-sign");
 	    	var ctx = c.getContext("2d");
-	    	dashSign(ctx, 40, 40, 20);
+	    	dashSign(ctx, 55, 40, 20);
 	    </script>
 
-	    <p align="center">Welcome to my blog.</p>
+	    <h3 align="center">Welcome to my blog.</h3>
 	    <p align="right">--By Dash.</p>
     </div>
+	
+	<div>
+	
+	</div>
 </body>
 </html>
