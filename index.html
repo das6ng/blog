@@ -1,9 +1,20 @@
 <html>
 <head>
-  <title>Dash into my life</title>
+    <meta language="en-US"/>
+    <title>Dash into my life</title>
+	<script src="./dashsign.js"></script>
 </head>
 <body>
-  <p>Welcome to my blog.</p>
-  <p>              --By Dash.</p>
+	<div id="title">
+	    <canvas id="dash" width="80" height="80"></canvas>
+	    <script type="text/javascript">
+	    	var c = document.getElementById("dash");
+	    	var ctx = c.getContext("2d");
+	    	dashSign(ctx, 40, 40, 20);
+	    </script>
+
+	    <p align="center">Welcome to my blog.</p>
+	    <p align="right">--By Dash.</p>
+    </div>
 </body>
 </html>
