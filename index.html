@@ -24,9 +24,13 @@ body{
 }
 
 #bottom{
+	text-align:center;
+}
+#timer{
+	margin:auto;
 	border:2px dotted gray;
-	width:43%;
-	margin-left:20%;
+	display:inline-block;
+	zoom:1;
 }
 	</style>
 </head>
@@ -45,12 +49,12 @@ body{
 	
 	<div id="main">
 	<br />
-	<span>hello world.</span>
+	<p>hello world.</p>
 	</div>
 	
 	<hr />
 	<div id="bottom">
-		<span id="timer" align="center"></span>
+		<p id="timer" align="center"></p>
 		<script type="text/javascript">
 			function timer(){
 				var datetime = new Date();
@@ -60,7 +64,7 @@ body{
 				var tDoc = "It flies anyway. -> ";
 				document.getElementById("timer").innerHTML = tDoc+date+"&nbsp"+time;
 			}
-			setInterval(function() {timer()},1000);
+			setInterval(timer,1000);
 		</script>
 	</div>
 </body>
