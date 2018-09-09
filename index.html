@@ -8,18 +8,25 @@
 	
 	<style type="text/css">
 div,canvas,p{
-	border:1px solid blue;
+	
 }
 body{
 	margin-left:10%;
 	margin-right:10%;
 	margin-top:5%;
+	margin-bottom:5%
 }
 
 #dash-sign{
 	margin-left:2%;
 	margin-top:2%;
 	float:left;
+}
+
+#bottom{
+	border:2px dotted gray;
+	width:43%;
+	margin-left:20%;
 }
 	</style>
 </head>
@@ -36,8 +43,25 @@ body{
 	    <p align="right">--By Dash.</p>
     </div>
 	
-	<div>
+	<div id="main">
+	<br />
+	<span>hello world.</span>
+	</div>
 	
+	<hr />
+	<div id="bottom">
+		<span id="timer" align="center"></span>
+		<script type="text/javascript">
+			function timer(){
+				var datetime = new Date();
+				var time = datetime.toLocaleTimeString();
+				var date = datetime.toLocaleDateString();
+				
+				var tDoc = "It flies anyway. -> ";
+				document.getElementById("timer").innerHTML = tDoc+date+"&nbsp"+time;
+			}
+			setInterval(function() {timer()},1000);
+		</script>
 	</div>
 </body>
 </html>
